@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts - Blog App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-zinc-900 text-white flex justify-center p-5 min-h-screen">
+
+    <div class="w-full max-w-2xl">
+        <h1 class="text-3xl font-bold text-center">Recent <span class="text-amber-500">Posts</span></h1>
+
+        <div class="mt-8 space-y-5">
+            <% posts.forEach(post => { %>
+                <div class="bg-zinc-800 p-5 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold"><%= post.user.name %></h3>
+                    <p class="text-gray-400 text-sm"><%= post.user.email %></p>
+                    <p class="text-gray-200 mt-2"><%= post.content %></p>
+                    <p class="text-gray-500 text-xs mt-2"><%= new Date(post.date).toLocaleString() %></p>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+
+</body>
+</html>

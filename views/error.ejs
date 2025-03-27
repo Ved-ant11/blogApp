@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="https://img.icons8.com/?size=100&id=360&format=png&color=000000" type="image/x-icon">
+</head>
+<body>
+    <div class="w-full h-full bg-zinc-900 text-white p-10 font-sans">
+        <h2 class="text-center text-3xl font-bold">Oops! Something went wrong</h2>
+        <h3 class="text-center text-2xl font-bold">Error: <%= error %></h3>
+        <div class="mt-10 flex justify-center gap-4">
+            <a class="text-blue-500 hover:text-blue-400 transition-colors" href="/">Home</a>
+            <a class="text-blue-500 hover:text-blue-400 transition-colors" href="/register">Register New User</a>
+        </div>
+    </div>
+</body>
+</html>
